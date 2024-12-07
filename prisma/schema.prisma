@@ -62,6 +62,7 @@ model Trend {
   updateAt DateTime @default(now())
 }
 
+
 model Answer {
   id       Int     @id @default(autoincrement())
   body     String
