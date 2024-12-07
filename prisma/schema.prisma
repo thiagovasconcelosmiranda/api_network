@@ -25,6 +25,7 @@ model User {
   cover    String  @default("default.jpg")
   bio      String?
   link     String?
+
 }
 
 model Tweet {
