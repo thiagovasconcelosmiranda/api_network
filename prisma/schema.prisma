@@ -25,6 +25,7 @@ model User {
   cover    String  @default("default.jpg")
   bio      String?
   link     String?
+  Tweet    Tweet[]
 }
 
 model Tweet {
@@ -34,6 +35,7 @@ model Tweet {
   image    String?
   createAt DateTime @default(now())
   answerOf Int      @default(0)
+  user     User     @relation(fields: [userSlug], references: [slug])
 }
 
 model TweetLike {
