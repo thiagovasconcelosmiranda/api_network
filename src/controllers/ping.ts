@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 
-export const ping = (res: Response, req: Request) => {
+
+export const ping = (req: Request, res: Response) => {
    res.json({pong: true});
-}
+  }
