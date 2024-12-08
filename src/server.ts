@@ -1,4 +1,4 @@
-import express, { urlencoded } from 'express';
+import express, { Request, Response, urlencoded } from 'express';
 import cors from 'cors';
 import { router } from './router/router'
 
@@ -8,6 +8,10 @@ app.use(express.json());
 app.use(cors());
 app.use(urlencoded({ extended: false }));
 app.use(router);
+
+app.get('/', (res: Response, req: Request)=>{
+   res.json({test: true});
+});
 
 app.listen(port || 4000, () => {
     console.log(`Server: http://localhost:${port}`);
