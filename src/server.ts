@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(cors());
 app.use(urlencoded({extended: false}));
 
-app.get('/ping', (res: Response, req: Request) => {
+app.get('/', (res: Response, req: Request) => {
       res.json({pong: true});
 })
 
