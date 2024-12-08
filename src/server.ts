@@ -7,7 +7,6 @@ const port = process.env.PORT ?? 4000;
 app.use(express.json());
 app.use(cors());
 app.use(urlencoded({ extended: false }));
-app.use(router);
 
 app.get('/', (res: Response, req: Request)=>{
    res.json({test: true});
